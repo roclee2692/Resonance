@@ -9,6 +9,8 @@
     "start": "Person A 开始作答",
     "resume": "继续上次的测试",
     "restart": "重新开始",
+    "selectVersion": "选择版本",
+    "selectDepth": "选择题量",
     "features": {
       "privacy": "数据仅存在你的设备上",
       "guides": "结果附带对话引导问题",
@@ -32,18 +34,43 @@
     "aligned": "🟢 高度对齐",
     "alignedDesc": "{{dims}}——你们在这些维度上的倾向非常接近，这是关系的稳定基石。",
     "moderate": "🟡 存在差异",
-    "moderateDesc": "{{dims}}——有一定分歧但在可协商范围内。建议就这些话题展开一次认真对话。",
+    "moderateDesc": "{{dims}}——有一定分歧但在可协商范围内。建议就这些话题展开一 次认真对话。",
     "divergent": "🔴 显著分歧",
     "divergentDesc": "{{dims}}——这些维度上你们的取向差距较大。这是最需要在做出承诺前深入沟通的领域。",
-    "disclaimer": "⚠️ 本评估基于场景化自我报告，不能替代深入的相处和沟通。分数相近 ≠ 一定合适，分数差异大 ≠ 一定不合适。真正的兼容性还需要在日常生活中验证。",
+    "disclaimer": "⚠️ 本评估基于场景化自我报告，不能替代深入的相处和沟通。分数相 近 ≠ 一定合适，分数差异大 ≠ 一定不合适。真正的兼容性还需要在日常生活中验证。",
     "reset": "重新测试",
     "share": "导出结果图片",
     "sharing": "生成中…",
     "dialogPrompts": "可以聊聊："
   },
-  "dimension": {
-    "aligned": "对齐",
-    "moderate": "有差异",
-    "divergent": "分歧大"
-  }
+  "tier": {
+    "quick": {
+      "label": "快速版",
+      "sublabel": "7 个维度 · 随机 21 题",
+      "timeMinutes": "约 5 分钟"
+    },
+    "standard": {
+      "label": "标准版",
+      "sublabel": "7 个维度 · 随机 49 题",
+      "timeMinutes": "约 15 分钟"
+    },
+    "full": {
+      "label": "深度版",
+      "sublabel": "10 个维度 · 110 题全覆盖",
+      "timeMinutes": "约 30 分钟"
+    }
+  },
+  "variant": {
+    "couple": {
+      "label": "情侣 / 恋人版",
+      "sublabel": "基于倾向和预期，探索你们的契合度"
+    },
+    "married": {
+      "label": "已婚 / 同居版",
+      "sublabel": "基于真实相处模式，识别摩擦点与成长空间"
+    }
+  },
+  "aligned": "对齐",
+  "moderate": "有差异",
+  "divergent": "分歧大"
 }

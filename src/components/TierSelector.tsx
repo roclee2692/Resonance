@@ -1,5 +1,5 @@
+import { useTranslation } from 'react-i18next'
 import type { Tier } from '../data/dimensions'
-import { TIER_CONFIGS } from '../data/dimensions'
 
 interface TierSelectorProps {
   selected: Tier
@@ -15,12 +15,13 @@ const ICONS: Record<Tier, string> = {
 }
 
 export function TierSelector({ selected, onChange }: TierSelectorProps) {
+  const { t } = useTranslation()
+  
   return (
     <div className="w-full max-w-xs mx-auto">
-      <p className="text-xs text-muted text-center mb-3 uppercase tracking-widest">Choose Depth</p>
+      <p className="text-xs text-muted text-center mb-3 uppercase tracking-widest">{t('landing.selectDepth')}</p>
       <div className="flex flex-col gap-2">
         {TIER_ORDER.map((tier) => {
-          const cfg = TIER_CONFIGS[tier]
           const isSelected = selected === tier
           return (
             <button
@@ -39,12 +40,12 @@ export function TierSelector({ selected, onChange }: TierSelectorProps) {
                     className="text-sm font-semibold"
                     style={{ color: isSelected ? '#4f9cf7' : '#e2e8f0' }}
                   >
-                    {cfg.label}
+                    {t(`tier.${tier}.label`)}
                   </span>
-                  <span className="text-xs text-muted">{cfg.timeMinutes}</span>
+                  <span className="text-xs text-muted">{t(`tier.${tier}.timeMinutes`)}</span>
                 </div>
                 <p className="text-xs mt-0.5" style={{ color: '#8896ab' }}>
-                  {cfg.sublabel}
+                  {t(`tier.${tier}.sublabel`)}
                 </p>
               </div>
               <div

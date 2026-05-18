@@ -171,10 +171,7 @@ export type Tier = 'quick' | 'standard' | 'full'
 
 export interface TierConfig {
   key: Tier
-  label: string
-  sublabel: string
   questionCount: number
-  timeMinutes: string
   perDim: number
   randomize: boolean
 }
@@ -182,28 +179,19 @@ export interface TierConfig {
 export const TIER_CONFIGS: Record<Tier, TierConfig> = {
   quick: {
     key: 'quick',
-    label: 'Quick',
-    sublabel: '7 dimensions · 21 random questions',
     questionCount: 21,
-    timeMinutes: '~5 min',
     perDim: 3,
     randomize: true,
   },
   standard: {
     key: 'standard',
-    label: 'Standard',
-    sublabel: '7 dimensions · 49 random questions',
     questionCount: 49,
-    timeMinutes: '~15 min',
     perDim: 7,
     randomize: true,
   },
   full: {
     key: 'full',
-    label: 'Complete',
-    sublabel: '10 dimensions · 110 full coverage',
     questionCount: 110,
-    timeMinutes: '~30 min',
     perDim: 11,
     randomize: false,
   },

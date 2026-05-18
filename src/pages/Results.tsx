@@ -2,7 +2,6 @@ import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import type { DimensionScores, Variant } from '../data/types'
 import type { Tier } from '../data/dimensions'
-import { TIER_CONFIGS } from '../data/dimensions'
 import { RadarComparison } from '../components/RadarComparison'
 import { DimensionDetail } from '../components/DimensionDetail'
 import { ShareCard } from '../components/ShareCard'
@@ -119,7 +118,7 @@ export function Results({ tier, variant, seed, scoresA, scoresB, onReset }: Resu
           result={result}
           aligned={aligned}
           divergent={divergent}
-          tier={TIER_CONFIGS[tier].label}
+          tier={tier}
         />
       </div>
     </div>

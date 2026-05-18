@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import type { Variant } from '../data/types'
 
 interface VariantSelectorProps {
@@ -5,32 +6,22 @@ interface VariantSelectorProps {
   onChange: (variant: Variant) => void
 }
 
-const VARIANTS: { key: Variant; icon: string; label: string; sublabel: string }[] = [
-  {
-    key: 'couple',
-    icon: '💬',
-    label: 'Dating / Couples',
-    sublabel: 'Based on tendencies and expectations, explore your alignment',
-  },
-  {
-    key: 'married',
-    icon: '🏠',
-    label: 'Married / Cohabiting',
-    sublabel: 'Based on real patterns, identify friction and growth areas',
-  },
-]
+const VARIANTS: Variant[] = ['couple', 'married']
 
 export function VariantSelector({ selected, onChange }: VariantSelectorProps) {
+  const { t } = useTranslation()
+  
   return (
     <div className="w-full max-w-xs mx-auto">
-      <p className="text-xs text-muted text-center mb-3 uppercase tracking-widest">Choose Version</p>
+      <p className="text-xs text-muted text-center mb-3 uppercase tracking-widest">{t('landing.selectVersion')}</p>
       <div className="flex flex-col gap-2">
-        {VARIANTS.map(({ key, icon, label, sublabel }) => {
-          const isSelected = selected === key
+        {VARIANTS.map((variant) => {
+          const isSelected = selected === variant
+          const icon = variant === 'couple' ? '💬' : '🏠'
           return (
             <button
-              key={key}
-              onClick={() => onChange(key)}
+              key={variant}
+              onClick={() => onChange(variant)}
               className="tier-card w-full flex items-center gap-3 px-4 py-3 rounded-[10px] border text-left"
               style={{
                 background: isSelected ? 'rgba(79,156,247,0.10)' : '#111827',
@@ -43,10 +34,10 @@ export function VariantSelector({ selected, onChange }: VariantSelectorProps) {
                   className="text-sm font-semibold"
                   style={{ color: isSelected ? '#4f9cf7' : '#e2e8f0' }}
                 >
-                  {label}
+                  {t(`variant.${variant}.label`)}
                 </span>
                 <p className="text-xs mt-0.5" style={{ color: '#8896ab' }}>
-                  {sublabel}
+                  {t(`variant.${variant}.sublabel`)}
                 </p>
               </div>
               <div

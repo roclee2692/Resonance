@@ -1,20 +1,23 @@
 import { forwardRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import {
   Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer,
 } from 'recharts'
 import type { RadarDataPoint } from '../data/types'
 import type { CompatibilityResult } from '../utils/scoring'
+import type { Tier } from '../data/dimensions'
 
 interface ShareCardProps {
   radarData: RadarDataPoint[]
   result: CompatibilityResult
   aligned: string[]
   divergent: string[]
-  tier: string
+  tier: Tier
 }
 
 export const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
   ({ radarData, result, aligned, divergent, tier }, ref) => {
+    const { t } = useTranslation()
     return (
       <div
         ref={ref}
@@ -32,7 +35,7 @@ export const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
         <div style={{ textAlign: 'center', marginBottom: 16 }}>
           <div style={{ fontSize: 28, marginBottom: 6 }}>⬡</div>
           <div style={{ fontSize: 11, color: '#4f9cf7', letterSpacing: 3, textTransform: 'uppercase', marginBottom: 12 }}>
-            Resonance · {tier}
+            Resonance · {t(`tier.${tier}.label`)}
           </div>
           <div
             style={{

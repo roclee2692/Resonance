@@ -9,6 +9,8 @@
     "start": "Person A Start",
     "resume": "Resume Last Session",
     "restart": "Start Over",
+    "selectVersion": "Choose Version",
+    "selectDepth": "Choose Depth",
     "features": {
       "privacy": "Data stays on your device",
       "guides": "Results include conversation prompts",
@@ -41,9 +43,34 @@
     "sharing": "Generating…",
     "dialogPrompts": "Talk about:"
   },
-  "dimension": {
-    "aligned": "Aligned",
-    "moderate": "Different",
-    "divergent": "Divergent"
-  }
+  "tier": {
+    "quick": {
+      "label": "Quick",
+      "sublabel": "7 dimensions · 21 random questions",
+      "timeMinutes": "~5 min"
+    },
+    "standard": {
+      "label": "Standard",
+      "sublabel": "7 dimensions · 49 random questions",
+      "timeMinutes": "~15 min"
+    },
+    "full": {
+      "label": "Complete",
+      "sublabel": "10 dimensions · 110 full coverage",
+      "timeMinutes": "~30 min"
+    }
+  },
+  "variant": {
+    "couple": {
+      "label": "Dating / Couples",
+      "sublabel": "Based on tendencies and expectations, explore your alignment"
+    },
+    "married": {
+      "label": "Married / Cohabiting",
+      "sublabel": "Based on real patterns, identify friction and growth areas"
+    }
+  },
+  "aligned": "Aligned",
+  "moderate": "Different",
+  "divergent": "Divergent"
 }
