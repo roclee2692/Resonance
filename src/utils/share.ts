@@ -34,5 +34,5 @@ export async function shareOrDownload(element: HTMLElement): Promise<void> {
     }
   }
 
-  downloadDataUrl(dataUrl, 'duolog-result.png')
+  downloadDataUrl(dataUrl, 'resonance-result.png')
 }

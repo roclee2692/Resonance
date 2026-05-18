@@ -1,7 +1,7 @@
 import type { AssessmentAnswers, DimensionScores, HistoryEntry, Phase, Variant } from '../data/types'
 import type { Tier } from '../data/dimensions'
 
-const KEY = 'duolog_session'
+const KEY = 'resonance_session'
 
 export interface SavedSession {
   tier: Tier

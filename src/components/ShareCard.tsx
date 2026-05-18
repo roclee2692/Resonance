@@ -32,7 +32,7 @@ export const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
         <div style={{ textAlign: 'center', marginBottom: 16 }}>
           <div style={{ fontSize: 28, marginBottom: 6 }}>⬡</div>
           <div style={{ fontSize: 11, color: '#4f9cf7', letterSpacing: 3, textTransform: 'uppercase', marginBottom: 12 }}>
-            Duolog · {tier}
+            Resonance · {tier}
           </div>
           <div
             style={{
@@ -81,7 +81,7 @@ export const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
 
         {/* Footer */}
         <div style={{ textAlign: 'center', borderTop: '1px solid #1e2a3a', paddingTop: 10 }}>
-          <span style={{ fontSize: 10, color: '#4a5568' }}>生成于 Duolog · 伴侣深度对话工具</span>
+          <span style={{ fontSize: 10, color: '#4a5568' }}>生成于 Resonance 共振 · 伴侣深度对话工具</span>
         </div>
       </div>
     )

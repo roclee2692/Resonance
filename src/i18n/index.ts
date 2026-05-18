@@ -8,13 +8,13 @@ i18n.use(initReactI18next).init({
     zh: { translation: zh },
     en: { translation: en },
   },
-  lng: localStorage.getItem('duolog_lang') ?? 'zh',
+  lng: localStorage.getItem('resonance_lang') ?? localStorage.getItem('duolog_lang') ?? 'zh',
   fallbackLng: 'zh',
   interpolation: { escapeValue: false },
 })
 
 i18n.on('languageChanged', (lng: string) => {
-  localStorage.setItem('duolog_lang', lng)
+  localStorage.setItem('resonance_lang', lng)
 })
 
 export default i18n
