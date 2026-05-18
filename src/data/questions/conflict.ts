@@ -92,7 +92,7 @@ export const conflictQuestions: Question[] = [
       { text: '非常不舒服，这种说法是不公平的攻击', textEn: "Very uncomfortable -- that kind of language is an unfair attack", score: 7 },
       { text: '有些在理，可能我确实有某种模式', textEn: "Somewhat valid -- maybe you do have that pattern", score: 5 },
       { text: '想反驳，但先忍着听对方说完', textEn: "Urge to push back, but force yourself to hear them out first", score: 6 },
-      { text: "直接打断----\"从来不\"这种话不准确，我要纠正', textEn: 'Interrupt to correct them -- \"never\" is factually inaccurate", score: 3 },
+      { text: '直接打断----"从来不"这种话不准确，我要纠正', textEn: 'Interrupt to correct them -- "never" is factually inaccurate', score: 3 },
     ],
   },
   {
