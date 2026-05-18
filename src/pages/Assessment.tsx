@@ -48,6 +48,7 @@ export function Assessment({ tier, variant, seed, person, answers, onAnswer, onB
     <QuestionCard
       question={q}
       dimLabel={q.dimLabel}
+      dimLabelEn={q.dimLabelEn}
       person={person}
       currentIdx={currentIdx}
       totalQuestions={flatQ.length}

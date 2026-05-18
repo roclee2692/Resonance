@@ -3,8 +3,9 @@ import { useTranslation } from 'react-i18next'
 import type { Question } from '../data/types'
 
 interface QuestionCardProps {
-  question: Question
+  question: Question & { dimLabel: string; dimLabelEn?: string }
   dimLabel: string
+  dimLabelEn?: string
   person: 'A' | 'B'
   currentIdx: number
   totalQuestions: number
@@ -16,6 +17,7 @@ interface QuestionCardProps {
 export function QuestionCard({
   question,
   dimLabel,
+  dimLabelEn,
   person,
   currentIdx,
   totalQuestions,
@@ -63,7 +65,7 @@ export function QuestionCard({
 
       {/* Dimension badge */}
       <div className="inline-block mb-3 px-3 py-1 rounded-full text-xs font-medium text-accent bg-highlight border border-accent/20">
-        {dimLabel}
+        {txt(dimLabel, dimLabelEn)}
       </div>
 
       {/* Question text */}
