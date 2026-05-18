@@ -40,7 +40,7 @@ export function DimensionDetail({ data, tier, variant, seed }: DimensionDetailPr
               <div>
                 <span className="text-sm font-medium text-slate-200">{label}</span>
                 {dim && (
-                  <p className="text-xs text-muted mt-0.5">{isEn ? dim.labelEn : dim.desc}</p>
+                  <p className="text-xs text-muted mt-0.5">{isEn ? dim.descEn : dim.desc}</p>
                 )}
                 <div className="flex gap-3 mt-1">
                   <span className="text-xs text-accent">A: {d.A}</span>

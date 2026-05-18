@@ -1,4 +1,5 @@
 import html2canvas from 'html2canvas'
+import i18n from '../i18n'
 
 export async function captureElementAsImage(element: HTMLElement): Promise<string> {
   const canvas = await html2canvas(element, {
@@ -24,9 +25,9 @@ export async function shareOrDownload(element: HTMLElement): Promise<void> {
   if (navigator.share && navigator.canShare) {
     try {
       const blob = await (await fetch(dataUrl)).blob()
-      const file = new File([blob], 'duolog-result.png', { type: 'image/png' })
+      const file = new File([blob], 'resonance-result.png', { type: 'image/png' })
       if (navigator.canShare({ files: [file] })) {
-        await navigator.share({ files: [file], title: 'Duolog 评估结果' })
+        await navigator.share({ files: [file], title: i18n.t('shareCard.shareTitle') })
         return
       }
     } catch {

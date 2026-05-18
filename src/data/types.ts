@@ -21,6 +21,7 @@ export interface Dimension {
   label: string
   labelEn: string
   desc: string
+  descEn: string
   questions: Question[]
   /** Weight for overall compatibility calculation. Default 1.0. */
   weight?: number

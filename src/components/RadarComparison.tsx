@@ -15,7 +15,7 @@ interface RadarComparisonProps {
 }
 
 export function RadarComparison({ data }: RadarComparisonProps) {
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
   const isEn = i18n.language === 'en'
   const chartData = isEn
     ? data.map((d) => ({ ...d, dimension: d.dimensionEn }))
@@ -28,7 +28,7 @@ export function RadarComparison({ data }: RadarComparisonProps) {
         <PolarAngleAxis dataKey="dimension" tick={{ fill: '#8896ab', fontSize: 11 }} />
         <PolarRadiusAxis domain={[0, 10]} tick={false} axisLine={false} />
         <Radar
-          name="Person A"
+          name={t('legend.personA')}
           dataKey="A"
           stroke="#4f9cf7"
           fill="#4f9cf7"
@@ -36,7 +36,7 @@ export function RadarComparison({ data }: RadarComparisonProps) {
           strokeWidth={2}
         />
         <Radar
-          name="Person B"
+          name={t('legend.personB')}
           dataKey="B"
           stroke="#f472b6"
           fill="#f472b6"

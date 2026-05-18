@@ -17,7 +17,9 @@ interface ShareCardProps {
 
 export const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
   ({ radarData, result, aligned, divergent, tier }, ref) => {
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
+    const isEn = i18n.language === 'en'
+    const listJoiner = isEn ? ', ' : ' · '
     return (
       <div
         ref={ref}
@@ -49,7 +51,7 @@ export const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
               border: `1px solid ${result.color}40`,
             }}
           >
-            {result.label}
+            {t(result.labelKey)}
           </div>
         </div>
 
@@ -70,21 +72,21 @@ export const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
         <div style={{ display: 'flex', gap: 8, marginBottom: 14 }}>
           {aligned.length > 0 && (
             <div style={{ flex: 1, background: 'rgba(52,211,153,0.08)', borderRadius: 8, padding: '8px 10px', border: '1px solid rgba(52,211,153,0.2)' }}>
-              <div style={{ fontSize: 10, color: '#34d399', marginBottom: 3 }}>🟢 高度对齐</div>
-              <div style={{ fontSize: 11, color: '#8896ab', lineHeight: 1.4 }}>{aligned.join(' · ')}</div>
+              <div style={{ fontSize: 10, color: '#34d399', marginBottom: 3 }}>{t('results.aligned')}</div>
+              <div style={{ fontSize: 11, color: '#8896ab', lineHeight: 1.4 }}>{aligned.join(listJoiner)}</div>
             </div>
           )}
           {divergent.length > 0 && (
             <div style={{ flex: 1, background: 'rgba(239,68,68,0.08)', borderRadius: 8, padding: '8px 10px', border: '1px solid rgba(239,68,68,0.2)' }}>
-              <div style={{ fontSize: 10, color: '#ef4444', marginBottom: 3 }}>🔴 显著分歧</div>
-              <div style={{ fontSize: 11, color: '#8896ab', lineHeight: 1.4 }}>{divergent.join(' · ')}</div>
+              <div style={{ fontSize: 10, color: '#ef4444', marginBottom: 3 }}>{t('results.divergent')}</div>
+              <div style={{ fontSize: 11, color: '#8896ab', lineHeight: 1.4 }}>{divergent.join(listJoiner)}</div>
             </div>
           )}
         </div>
 
         {/* Footer */}
         <div style={{ textAlign: 'center', borderTop: '1px solid #1e2a3a', paddingTop: 10 }}>
-          <span style={{ fontSize: 10, color: '#4a5568' }}>生成于 Resonance 共振 · 伴侣深度对话工具</span>
+          <span style={{ fontSize: 10, color: '#4a5568' }}>{t('shareCard.footer')}</span>
         </div>
       </div>
     )

@@ -18,16 +18,24 @@ interface ResultsProps {
 }
 
 export function Results({ tier, variant, seed, scoresA, scoresB, onReset }: ResultsProps) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const shareCardRef = useRef<HTMLDivElement>(null)
   const [sharing, setSharing] = useState(false)
+  const isEn = i18n.language === 'en'
 
   const radarData = computeRadarData(scoresA, scoresB, tier, variant, seed)
   const result = getCompatibilityResult(radarData, variant)
 
-  const aligned = radarData.filter((d) => d.diff <= 1.5).map((d) => d.dimension)
-  const moderate = radarData.filter((d) => d.diff > 1.5 && d.diff <= 3).map((d) => d.dimension)
-  const divergent = radarData.filter((d) => d.diff > 3).map((d) => d.dimension)
+  const aligned = radarData
+    .filter((d) => d.diff <= 1.5)
+    .map((d) => (isEn ? d.dimensionEn : d.dimension))
+  const moderate = radarData
+    .filter((d) => d.diff > 1.5 && d.diff <= 3)
+    .map((d) => (isEn ? d.dimensionEn : d.dimension))
+  const divergent = radarData
+    .filter((d) => d.diff > 3)
+    .map((d) => (isEn ? d.dimensionEn : d.dimension))
+  const listJoiner = isEn ? ', ' : '、'
 
   const handleShare = async () => {
     if (!shareCardRef.current || sharing) return
@@ -47,9 +55,9 @@ export function Results({ tier, variant, seed, scoresA, scoresB, onReset }: Resu
           className="inline-block px-5 py-1.5 rounded-full text-[15px] font-bold mb-3 border"
           style={{ color: result.color, background: `${result.color}18`, borderColor: `${result.color}40` }}
         >
-          {result.label}
+          {t(result.labelKey)}
         </div>
-        <p className="text-dim text-[13px] leading-[1.8] max-w-sm mx-auto">{result.desc}</p>
+        <p className="text-dim text-[13px] leading-[1.8] max-w-sm mx-auto">{t(result.descKey)}</p>
       </div>
 
       {/* Radar chart */}
@@ -67,7 +75,7 @@ export function Results({ tier, variant, seed, scoresA, scoresB, onReset }: Resu
         <div className="mb-4">
           <h3 className="text-sm font-semibold text-emerald-400 mb-1.5">{t('results.aligned')}</h3>
           <p className="text-dim text-[13px] leading-[1.7]">
-            {t('results.alignedDesc', { dims: aligned.join('、') })}
+            {t('results.alignedDesc', { dims: aligned.join(listJoiner) })}
           </p>
         </div>
       )}
@@ -75,7 +83,7 @@ export function Results({ tier, variant, seed, scoresA, scoresB, onReset }: Resu
         <div className="mb-4">
           <h3 className="text-sm font-semibold text-amber-400 mb-1.5">{t('results.moderate')}</h3>
           <p className="text-dim text-[13px] leading-[1.7]">
-            {t('results.moderateDesc', { dims: moderate.join('、') })}
+            {t('results.moderateDesc', { dims: moderate.join(listJoiner) })}
           </p>
         </div>
       )}
@@ -83,7 +91,7 @@ export function Results({ tier, variant, seed, scoresA, scoresB, onReset }: Resu
         <div className="mb-4">
           <h3 className="text-sm font-semibold text-red-400 mb-1.5">{t('results.divergent')}</h3>
           <p className="text-dim text-[13px] leading-[1.7]">
-            {t('results.divergentDesc', { dims: divergent.join('、') })}
+            {t('results.divergentDesc', { dims: divergent.join(listJoiner) })}
           </p>
         </div>
       )}
