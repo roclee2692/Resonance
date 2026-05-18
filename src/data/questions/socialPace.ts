@@ -33,8 +33,8 @@ export const socialPaceQuestions: Question[] = [
     ],
   },
   {
-    text: '你们两个加在一起，你觉得理想的每周"在一起的时间"大约是：',
-    textEn: 'Ideally, how much time per week would you and your partner spend together?',
+    text: '理想情况下，你希望每周与伴侣相处的总时长大约是：',
+    textEn: 'Ideally, about how much time per week would you and your partner spend together?',
     options: [
       { text: '尽可能多，我喜欢大量的陪伴', textEn: "As much as possible -- you love lots of togetherness", score: 2 },
       { text: '下班后大部分时间一起', textEn: "Most evenings after work", score: 4 },
