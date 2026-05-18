@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node server.js"
   },
-  "dependencies": {
+  "deexpress": "^4.18.2",
+    "pendencies": {
     "html2canvas": "^1.4.1",
     "i18next": "^23.16.4",
     "react": "^18.3.1",
