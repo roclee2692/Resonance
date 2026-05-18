@@ -9,21 +9,21 @@ const VARIANTS: { key: Variant; icon: string; label: string; sublabel: string }[
   {
     key: 'couple',
     icon: '💬',
-    label: '情侣 / 恋人版',
-    sublabel: '基于倾向和预期，探索你们的契合度',
+    label: 'Dating / Couples',
+    sublabel: 'Based on tendencies and expectations, explore your alignment',
   },
   {
     key: 'married',
     icon: '🏠',
-    label: '已婚 / 同居版',
-    sublabel: '基于真实相处模式，识别摩擦点与成长空间',
+    label: 'Married / Cohabiting',
+    sublabel: 'Based on real patterns, identify friction and growth areas',
   },
 ]
 
 export function VariantSelector({ selected, onChange }: VariantSelectorProps) {
   return (
     <div className="w-full max-w-xs mx-auto">
-      <p className="text-xs text-muted text-center mb-3 uppercase tracking-widest">选择版本</p>
+      <p className="text-xs text-muted text-center mb-3 uppercase tracking-widest">Choose Version</p>
       <div className="flex flex-col gap-2">
         {VARIANTS.map(({ key, icon, label, sublabel }) => {
           const isSelected = selected === key

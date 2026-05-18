@@ -17,7 +17,7 @@ const ICONS: Record<Tier, string> = {
 export function TierSelector({ selected, onChange }: TierSelectorProps) {
   return (
     <div className="w-full max-w-xs mx-auto">
-      <p className="text-xs text-muted text-center mb-3 uppercase tracking-widest">选择题量</p>
+      <p className="text-xs text-muted text-center mb-3 uppercase tracking-widest">Choose Depth</p>
       <div className="flex flex-col gap-2">
         {TIER_ORDER.map((tier) => {
           const cfg = TIER_CONFIGS[tier]
