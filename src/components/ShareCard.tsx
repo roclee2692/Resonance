@@ -18,7 +18,8 @@ interface ShareCardProps {
 export const ShareCard = forwardRef<HTMLDivElement, ShareCardProps>(
   ({ radarData, result, aligned, divergent, tier }, ref) => {
     const { t, i18n } = useTranslation()
-    const isEn = i18n.language === 'en'
+    const language = i18n.resolvedLanguage ?? i18n.language
+    const isEn = language.startsWith('en')
     const listJoiner = isEn ? ', ' : ' · '
     return (
       <div

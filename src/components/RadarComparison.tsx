@@ -16,7 +16,8 @@ interface RadarComparisonProps {
 
 export function RadarComparison({ data }: RadarComparisonProps) {
   const { i18n, t } = useTranslation()
-  const isEn = i18n.language === 'en'
+  const language = i18n.resolvedLanguage ?? i18n.language
+  const isEn = language.startsWith('en')
   const chartData = isEn
     ? data.map((d) => ({ ...d, dimension: d.dimensionEn }))
     : data

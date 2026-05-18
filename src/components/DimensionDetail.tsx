@@ -20,7 +20,8 @@ function DiffTag({ diff }: { diff: number }) {
 
 export function DimensionDetail({ data, tier, variant, seed }: DimensionDetailProps) {
   const { t, i18n } = useTranslation()
-  const isEn = i18n.language === 'en'
+  const language = i18n.resolvedLanguage ?? i18n.language
+  const isEn = language.startsWith('en')
   const dims = getDimensions(tier, variant, seed)
 
   return (

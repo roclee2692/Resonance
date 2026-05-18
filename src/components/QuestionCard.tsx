@@ -27,7 +27,8 @@ export function QuestionCard({
 }: QuestionCardProps) {
   const { t, i18n } = useTranslation()
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null)
-  const isEn = i18n.language === 'en'
+  const language = i18n.resolvedLanguage ?? i18n.language
+  const isEn = language.startsWith('en')
   const txt = (zh: string, en?: string) => (isEn && en ? en : zh)
 
   const handleAnswer = (score: number, idx: number) => {

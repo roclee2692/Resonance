@@ -243,7 +243,7 @@ export function getFlatQuestions(tier: Tier, variant: Variant = 'couple', seed =
       ...q,
       dimKey: dim.key,
       dimLabel: dim.label,
-      dimLabelEn: dim.labelEn,
+      dimLabelEn: dim.labelEn ?? dim.label,
       dimIdx: getDimensions(tier, variant, seed).indexOf(dim),
       qIdx: qi,
     }))

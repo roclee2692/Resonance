@@ -37,7 +37,7 @@ export function computeRadarData(
 
     return {
       dimension: dim.label,
-      dimensionEn: dim.labelEn,
+      dimensionEn: dim.labelEn ?? dim.label,
       dimKey: dim.key,
       A: avgA,
       B: avgB,

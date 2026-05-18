@@ -21,7 +21,8 @@ export function Results({ tier, variant, seed, scoresA, scoresB, onReset }: Resu
   const { t, i18n } = useTranslation()
   const shareCardRef = useRef<HTMLDivElement>(null)
   const [sharing, setSharing] = useState(false)
-  const isEn = i18n.language === 'en'
+  const language = i18n.resolvedLanguage ?? i18n.language
+  const isEn = language.startsWith('en')
 
   const radarData = computeRadarData(scoresA, scoresB, tier, variant, seed)
   const result = getCompatibilityResult(radarData, variant)

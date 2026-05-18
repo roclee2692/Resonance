@@ -2,7 +2,8 @@ import { useTranslation } from 'react-i18next'
 
 export function LangToggle() {
   const { i18n } = useTranslation()
-  const isZh = i18n.language === 'zh'
+  const language = i18n.resolvedLanguage ?? i18n.language
+  const isZh = language.startsWith('zh')
 
   return (
     <button
