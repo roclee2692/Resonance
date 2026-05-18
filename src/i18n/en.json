@@ -1,0 +1,49 @@
+{
+  "app": {
+    "name": "Resonance",
+    "tagline": "共振 · Partner Compatibility Tool"
+  },
+  "landing": {
+    "desc": "{{count}} dimensions, scenario-based questions to assess decision-making compatibility.",
+    "subdesc": "Each person answers independently. Results show a radar comparison. No right answers — only alignment.",
+    "start": "Person A Start",
+    "resume": "Resume Last Session",
+    "restart": "Start Over",
+    "features": {
+      "privacy": "Data stays on your device",
+      "guides": "Results include conversation prompts",
+      "tiers": "Three depth levels to choose from"
+    }
+  },
+  "assessment": {
+    "personLabel": "Person {{person}}",
+    "progress": "{{current}} / {{total}}",
+    "back": "← Previous",
+    "complete": "{{person}} finished",
+    "completeDesc": "Answered {{count}} questions",
+    "continue": "Continue"
+  },
+  "transition": {
+    "title": "Pass the phone to Person B",
+    "desc": "Person A has finished. Please answer independently without discussing.",
+    "start": "Person B Start"
+  },
+  "results": {
+    "aligned": "🟢 Highly Aligned",
+    "alignedDesc": "{{dims}} — very close alignment, a stable foundation.",
+    "moderate": "🟡 Some Differences",
+    "moderateDesc": "{{dims}} — negotiable differences. Worth a dedicated conversation.",
+    "divergent": "🔴 Significant Divergence",
+    "divergentDesc": "{{dims}} — notable gap. Prioritize discussing these before major commitments.",
+    "disclaimer": "⚠️ This assessment is based on self-reported scenarios and cannot replace lived experience. High alignment ≠ definitely compatible; divergence ≠ incompatible.",
+    "reset": "Retake",
+    "share": "Export Image",
+    "sharing": "Generating…",
+    "dialogPrompts": "Talk about:"
+  },
+  "dimension": {
+    "aligned": "Aligned",
+    "moderate": "Different",
+    "divergent": "Divergent"
+  }
+}

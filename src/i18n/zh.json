@@ -1,0 +1,49 @@
+{
+  "app": {
+    "name": "共振",
+    "tagline": "Resonance · 伴侣深度对话工具"
+  },
+  "landing": {
+    "desc": "基于 {{count}} 个关键维度，通过具体场景题评估两人的决策兼容性。",
+    "subdesc": "每人独立作答，完成后生成雷达图对比。没有标准答案，只有你们在关键问题上是否对齐。",
+    "start": "Person A 开始作答",
+    "resume": "继续上次的测试",
+    "restart": "重新开始",
+    "features": {
+      "privacy": "数据仅存在你的设备上",
+      "guides": "结果附带对话引导问题",
+      "tiers": "三种题量，按需选择"
+    }
+  },
+  "assessment": {
+    "personLabel": "Person {{person}}",
+    "progress": "{{current}} / {{total}}",
+    "back": "← 上一题",
+    "complete": "{{person}} 作答完成",
+    "completeDesc": "共回答了 {{count}} 道题目",
+    "continue": "继续"
+  },
+  "transition": {
+    "title": "请将手机交给 Person B",
+    "desc": "Person A 已完成作答。请在不讨论答案的情况下独立完成。",
+    "start": "Person B 开始作答"
+  },
+  "results": {
+    "aligned": "🟢 高度对齐",
+    "alignedDesc": "{{dims}}——你们在这些维度上的倾向非常接近，这是关系的稳定基石。",
+    "moderate": "🟡 存在差异",
+    "moderateDesc": "{{dims}}——有一定分歧但在可协商范围内。建议就这些话题展开一次认真对话。",
+    "divergent": "🔴 显著分歧",
+    "divergentDesc": "{{dims}}——这些维度上你们的取向差距较大。这是最需要在做出承诺前深入沟通的领域。",
+    "disclaimer": "⚠️ 本评估基于场景化自我报告，不能替代深入的相处和沟通。分数相近 ≠ 一定合适，分数差异大 ≠ 一定不合适。真正的兼容性还需要在日常生活中验证。",
+    "reset": "重新测试",
+    "share": "导出结果图片",
+    "sharing": "生成中…",
+    "dialogPrompts": "可以聊聊："
+  },
+  "dimension": {
+    "aligned": "对齐",
+    "moderate": "有差异",
+    "divergent": "分歧大"
+  }
+}

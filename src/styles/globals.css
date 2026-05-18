@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0a0f1a;
+    color: #e2e8f0;
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    /* iOS safe areas */
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ── Animations ─────────────────────────────────────────────────────────── */
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes optionPop {
+  0% { transform: scale(1); }
+  40% { transform: scale(0.97); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-fadeSlideIn {
+  animation: fadeSlideIn 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Question card animation triggered by key change */
+.question-enter {
+  animation: fadeSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Option click feedback */
+.option-btn:active {
+  animation: optionPop 0.15s ease-out;
+  background-color: rgba(79, 156, 247, 0.15) !important;
+  border-color: #4f9cf7 !important;
+}
+
+/* Selected state flash */
+.option-selected {
+  border-color: #4f9cf7 !important;
+  background: rgba(79, 156, 247, 0.12) !important;
+  transition: all 0.15s ease;
+}
+
+/* ── Utilities ───────────────────────────────────────────────────────────── */
+
+.text-dim {
+  color: #8896ab;
+}
+
+.text-muted {
+  color: #4a5568;
+}
+
+.bg-highlight {
+  background-color: rgba(79, 156, 247, 0.08);
+}
+
+.border-subtle {
+  border-color: #1e2a3a;
+}
+
+/* Remove summary marker in details */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Mobile touch: minimum tap target */
+button {
+  min-height: 44px;
+}
+
+/* Tier selector card hover */
+.tier-card {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tier-card:hover {
+  transform: translateY(-2px);
+}
+
+.tier-card:active {
+  transform: translateY(0) scale(0.99);
+}
+
+/* Tag utility */
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  border: 1px solid;
+}

@@ -1,0 +1,7 @@
+export { marriedLifePhilosophyQuestions } from './lifePhilosophy'
+export { marriedValuesQuestions } from './values'
+export { marriedMoneyQuestions } from './money'
+export { marriedConflictQuestions } from './conflict'
+export { marriedEmotionalQuestions } from './emotional'
+export { marriedParentingQuestions } from './parenting'
+export { marriedGrowthQuestions } from './growth'
