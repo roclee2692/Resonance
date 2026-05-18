@@ -9,8 +9,8 @@
     "preview": "vite preview",
     "start": "node server.js"
   },
-  "deexpress": "^4.18.2",
-    "pendencies": {
+  "dependencies": {
+    "express": "^4.18.2",
     "html2canvas": "^1.4.1",
     "i18next": "^23.16.4",
     "react": "^18.3.1",
