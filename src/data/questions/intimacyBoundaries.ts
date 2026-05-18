@@ -68,7 +68,7 @@ export const intimacyBoundariesQuestions: Question[] = [
     options: [
       { text: '这是关系中非常重要的部分，需要主动维护', textEn: "It's a very important part of the relationship -- needs active attention", score: 8 },
       { text: '重要，但不是我判断关系质量的主要标准', textEn: "Important, but not your main measure of relationship quality", score: 6 },
-      { text: "随关系自然发展，不需要\"经营\"', textEn: 'Let it evolve naturally -- doesn't need to be \"managed\"", score: 4 },
+      { text: '随关系自然发展，不需要"经营"', textEn: 'Let it evolve naturally -- does not need to be "managed"', score: 4 },
       { text: '坦白说，这是我比较难以开口讨论的话题', textEn: "Honestly, this is a topic you find hard to discuss openly", score: 3 },
     ],
   },

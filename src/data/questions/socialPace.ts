@@ -68,7 +68,7 @@ export const socialPaceQuestions: Question[] = [
     options: [
       { text: '爱人就是我最好的朋友，不需要刻意区分', textEn: "Your partner is your best friend -- no need to deliberately separate the two", score: 2 },
       { text: '需要一些各自的空间，但共处时间仍是主要的', textEn: "Need some personal space, but shared time is still primary", score: 5 },
-      { text: "希望有清晰的\"共处\"和\"个人\"时间划分', textEn: 'Want a clear distinction between together time and personal time", score: 7 },
+      { text: '希望有清晰的"共处"和"个人"时间划分', textEn: 'Want a clear distinction between together time and personal time', score: 7 },
       { text: '保持各自独立的生活，共处是两条平行线的交汇', textEn: "Maintain largely independent lives -- togetherness is where two parallel paths intersect", score: 9 },
     ],
   },

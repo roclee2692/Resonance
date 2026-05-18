@@ -20,7 +20,7 @@ export const marriedConflictQuestions: Question[] = [
       { text: '基本上总是我', textEn: "Almost always you", score: 4 },
       { text: '基本上总是伴侣', textEn: "Almost always your partner", score: 4 },
       { text: '大致轮流，取决于情况', textEn: "Roughly takes turns, depending on the situation", score: 8 },
-      { text: "我们都不太主动，经常靠时间\"冲淡\"', textEn: 'Neither is proactive -- usually just wait it out", score: 2 },
+      { text: '我们都不太主动，经常靠时间"冲淡"', textEn: 'Neither is proactive -- usually just wait it out', score: 2 },
     ],
   },
   {

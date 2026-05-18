@@ -38,7 +38,7 @@ export const emotionalQuestions: Question[] = [
     text: '你感到很焦虑，但说不清楚具体原因。你通常会：',
     textEn: "You feel anxious but can't pinpoint exactly why. You typically:",
     options: [
-      { text: "跟伴侣说\"我最近有些焦虑\"，即使说不清楚为什么', textEn: 'Tell your partner \"I've been anxious lately,\" even without knowing why", score: 7 },
+      { text: '跟伴侣说"我最近有些焦虑"，即使说不清楚为什么', textEn: 'Tell your partner "I\'ve been anxious lately," even without knowing why', score: 7 },
       { text: '自己梳理清楚原因，再考虑要不要说', textEn: "Work out the reason yourself first, then decide whether to mention it", score: 6 },
       { text: '转移注意力，等情绪自然消散', textEn: "Distract yourself and wait for it to pass", score: 3 },
       { text: '让焦虑影响日常，伴侣会感受到但我不主动解释', textEn: "Let it affect your daily mood -- your partner will sense it but you won't explain", score: 2 },
