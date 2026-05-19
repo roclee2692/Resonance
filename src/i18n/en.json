@@ -11,6 +11,9 @@
     "restart": "Start Over",
     "selectVersion": "Choose Version",
     "selectDepth": "Choose Depth",
+    "attributionPrefix": "Made by Raelon · GitHub: ",
+    "attributionLinkText": "roclee2692/Resonance",
+    "attributionSuffix": " · Open-source & free · Non-commercial use only",
     "features": {
       "privacy": "Data stays on your device",
       "guides": "Results include conversation prompts",

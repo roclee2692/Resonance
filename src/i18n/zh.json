@@ -11,6 +11,9 @@
     "restart": "重新开始",
     "selectVersion": "选择版本",
     "selectDepth": "选择题量",
+    "attributionPrefix": "Made by Raelon · GitHub：",
+    "attributionLinkText": "roclee2692/Resonance",
+    "attributionSuffix": " · 开源免费 · 禁止商用",
     "features": {
       "privacy": "数据仅存在你的设备上",
       "guides": "结果附带对话引导问题",

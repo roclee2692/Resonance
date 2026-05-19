@@ -65,6 +65,19 @@ export function Landing({ tier, variant, onTierChange, onVariantChange, onStart,
           </div>
         ))}
       </div>
+
+      <p className="mt-8 text-[11px] text-muted leading-relaxed max-w-xs">
+        {t('landing.attributionPrefix')}
+        <a
+          href="https://github.com/roclee2692/Resonance"
+          target="_blank"
+          rel="noreferrer"
+          className="text-accent hover:text-slate-200 transition-colors"
+        >
+          {t('landing.attributionLinkText')}
+        </a>
+        {t('landing.attributionSuffix')}
+      </p>
     </div>
   )
 }
